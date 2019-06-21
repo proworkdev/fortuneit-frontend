@@ -111,6 +111,14 @@ class evaluationForm extends Component {
 
         const { asin, sku, quantity, principal, shipping, referral, fba, priceData } = this.state;
 
+        if (priceData.profitOrLoss !== undefined) {
+            if (priceData.profitOrLoss < 0) {
+                console.log('Isme tera ghaata!');
+            } else {
+                console.log('Mera kuch nahin jaata!');
+            }
+        }
+
         return (
             <div>
 
@@ -127,13 +135,11 @@ class evaluationForm extends Component {
                             <h4><u>Enter Product Fields</u></h4>
 
                             <br />
-
                             {
                                 this.state.errorMessage ? (
                                     <p style={{ color: 'red' }}>{this.state.errorMessage}</p>
                                 ) : null
                             }
-
                             <Form>
 
                                 <FormGroup>
@@ -203,30 +209,69 @@ class evaluationForm extends Component {
                         </div>
 
                         <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
-                            <ModalHeader toggle={this.toggle}>Product Evaluation</ModalHeader>
+                            <ModalHeader toggle={this.toggle}><u>Product Evaluation</u></ModalHeader>
                             <ModalBody>
-                                <Table size="lg" bordered responsive>
-                                    <thead>
-                                        <tr>
-                                            <th>Buy Cost</th>
-                                            <th>Order & Staging Cost</th>
-                                            <th>Shipping Total</th>
-                                            <th>Landed Order Cost</th>
-                                            <th>Landed Average Cost</th>
-                                            <th>Fulfilled Unit Cost</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>$ {priceData.netCost}</td>
-                                            <td>$ {priceData.orderAndStaging}</td>
-                                            <td>$ {priceData.shippingTotal}</td>
-                                            <td>$ {priceData.landedOrder}</td>
-                                            <td>$ {priceData.landedAverage}</td>
-                                            <td>$ {priceData.fulfilledUnitCost}</td>
-                                        </tr>
-                                    </tbody>
-                                </Table>
+
+                                <Form>
+
+                                    <FormGroup>
+                                        <Label>Buy Cost</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.netCost} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Order & Staging Cost</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.orderAndStaging} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Shipping Total</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.shippingTotal} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Landed Order Cost</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.landedOrder} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Landed Average Cost</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.landedAverage} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Referral Fee</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.referral} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>FBA Fee</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.fba} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Fulfilled Unit Cost</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.fulfilledUnitCost} />
+                                    </FormGroup>
+
+                                    <FormGroup>
+                                        <Label>Selling Price</Label>
+                                        <Input type="text" disabled value={'$ ' + priceData.sellingPrice} />
+                                    </FormGroup>
+                                    {
+                                        priceData.profitOrLoss < 0 ? (
+                                            <FormGroup>
+                                                <Label>Loss</Label>
+                                                <Input type="text" disabled value={'$ ' + Math.abs(priceData.profitOrLoss)} />
+                                            </FormGroup>
+                                        ) :
+                                            <FormGroup>
+                                                <Label>Profit</Label>
+                                                <Input type="text" disabled value={'$ ' + priceData.profitOrLoss} />
+                                            </FormGroup>
+                                    }
+                                </Form>
+
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="primary" onClick={this.toggle}>Okay</Button>

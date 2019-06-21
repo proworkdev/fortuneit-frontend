@@ -10,6 +10,7 @@ import productReducer from './productReducer';
 import orderReducer from './orderReducer';
 import transactionsReducer from './transactionsReducer';
 import refundsReducer from './refundsReducer';
+import fulfillmentReducer from './fulfillmentReducer';
 
 export default combineReducers({
     auth: authReducer,
@@ -22,5 +23,6 @@ export default combineReducers({
     product: productReducer,
     order: orderReducer,
     transact: transactionsReducer,
-    refund: refundsReducer
+    refund: refundsReducer,
+    fulfillment: fulfillmentReducer
 })

@@ -83,3 +83,10 @@ export const TRANSACTIONS_FETCH_FAILURE = 'TRANSACTIONS_FETCH_FAILURE';
 export const REFUNDS_FETCH_SUCCESS = 'REFUNDS_FETCH_SUCCESS';
 export const REFUNDS_FETCH_FAILURE = 'REFUNDS_FETCH_FAILURE';
 //---------------------------------------------------------------------
+
+//--------------------FULFILLMENT ORDERS SUCCESS-----------------------
+export const FULFILLMENT_ORDERS_SUCCESS = 'FULFILLMENT_ORDERS_SUCCESS';
+export const FULFILLMENT_ORDERS_FAILURE = 'FULFILLMENT_ORDERS_FAILURE';
+export const FULFILLMENT_DETAILS_SUCCESS = 'FULFILLMENT_DETAILS_SUCCESS';
+export const FULFILLMENT_DETAILS_FAILURE = 'FULFILLMENT_DETAILS_FAILURE';
+//-------------------------------------------------------------------

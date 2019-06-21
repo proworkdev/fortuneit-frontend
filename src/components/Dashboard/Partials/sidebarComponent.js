@@ -70,6 +70,26 @@ export default class sidebarComponent extends Component {
                 </ul>
               </li>
 
+
+
+
+
+
+
+
+
+              <li className="nav-item">
+                <a className="sidebar-link" data-toggle="collapse" href="#fulfillment">
+                  <span className="icon-holder"><i className="fa fa-tachometer" aria-hidden="true"></i> </span><span className="title">Fulfillment</span>
+                </a>
+                <ul id="fulfillment" className="submenu-bar collapse">
+                  <li>
+                    <Link to='/fulfillmentOrders' className="menu-btn">Order Fulfillments</Link>
+                  </li>
+
+                </ul>
+              </li>
+
               {/* <li className="nav-item">
                 <a className="sidebar-link" data-toggle="collapse" href="#transaction">
                   <span className="icon-holder"><i className="fa fa-money" aria-hidden="true"></i> </span><span className="title">Transactions</span>
