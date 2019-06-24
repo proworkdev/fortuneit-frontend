@@ -15,6 +15,7 @@ import {
     Label,
     Input
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class evaluationForm extends Component {
 
@@ -206,6 +207,12 @@ class evaluationForm extends Component {
 
                             <Button onClick={this.onClickFunction} block color="warning"><p style={{ color: '#fff' }}>Check</p></Button>
 
+                            <center>
+                                <div style={{ marginTop: 20 }}>
+                                    <Link to="/productEvaluator">Check another product</Link>
+                                </div>
+                            </center>
+
                         </div>
 
                         <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
@@ -261,12 +268,12 @@ class evaluationForm extends Component {
                                     {
                                         priceData.profitOrLoss < 0 ? (
                                             <FormGroup>
-                                                <Label>Loss</Label>
+                                                <Label style={{ color: 'red' }}>Loss</Label>
                                                 <Input type="text" disabled value={'$ ' + Math.abs(priceData.profitOrLoss)} />
                                             </FormGroup>
                                         ) :
                                             <FormGroup>
-                                                <Label>Profit</Label>
+                                                <Label style={{ color: 'green' }}>Profit</Label>
                                                 <Input type="text" disabled value={'$ ' + priceData.profitOrLoss} />
                                             </FormGroup>
                                     }

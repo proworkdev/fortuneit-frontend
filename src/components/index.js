@@ -29,6 +29,7 @@ import productFees from './Dashboard/Products/productFees';
 import productEvaluator from './Dashboard/Products/productEvaluator';
 import evaluationForm from './Dashboard/Products/evaluationForm';
 import fulfillmentOrders from './Dashboard/Fulfillments/fulfillmentOrders';
+import fulfillmentDetails from './Dashboard/Fulfillments/fulfillmentDetails';
 
 export {
     LandingPage,
@@ -61,5 +62,6 @@ export {
     productFees,
     productEvaluator,
     evaluationForm,
-    fulfillmentOrders
+    fulfillmentOrders,
+    fulfillmentDetails
 }

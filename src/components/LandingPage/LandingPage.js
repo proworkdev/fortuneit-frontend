@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+
 class LandingPage extends Component {
 
 	render() {
@@ -39,13 +40,15 @@ class LandingPage extends Component {
 								</div>
 							</nav>
 						</div>
+
 						<div className="banner-content">
 							<div className="banner-heading">
 								INCREASE <span className="yellow-text">SALES, WIN & RETAIN</span> <span className="smaill-text"> MORE CUSTOMERS NOW!</span>
 							</div>
 						</div>
+
 					</div>
-					<div className="bg-trangle" ></div>
+					<div className="bg-trangle"></div>
 				</div>
 
 				<div className="branrds">

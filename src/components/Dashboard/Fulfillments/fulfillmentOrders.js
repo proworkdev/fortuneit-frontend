@@ -16,8 +16,7 @@ class fulfillmentOrders extends Component {
             fulfillmentsPerPage: 10,
             modal: false,
             detailsModal: false,
-            addressDetails: {},
-            fulfillmentDetailsData: {}
+            addressDetails: {}
         }
     }
 
@@ -34,8 +33,11 @@ class fulfillmentOrders extends Component {
         }
 
         if (fulfillmentDetails !== prevProps.fulfillmentDetails) {
-            ;
-            this.setState({ fulfillmentDetailsData: fulfillmentDetails.data })
+
+            this.props.history.push({
+                pathname: '/fulfillmentDetails',
+                state: { details: fulfillmentDetails.data }
+            })
         }
 
     }
@@ -89,7 +91,7 @@ class fulfillmentOrders extends Component {
 
     render() {
 
-        const { allFulfillments, currentPage, fulfillmentsPerPage, addressDetails, fulfillmentDetailsData } = this.state;
+        const { allFulfillments, currentPage, fulfillmentsPerPage, addressDetails } = this.state;
 
         const pageNumbers = [];
         const indexOfLastFulfillment = currentPage * fulfillmentsPerPage;
@@ -112,8 +114,6 @@ class fulfillmentOrders extends Component {
                 </li>
             )
         })
-
-        console.log('Fulf details data in render --> ', fulfillmentDetailsData);
 
         return (
             <div>
@@ -142,7 +142,11 @@ class fulfillmentOrders extends Component {
                                                 <td>{fulfillment.AmazonOrderId}</td>
                                                 <td>{fulfillment.DisplayableOrderDateTime}</td>
                                                 <td>{fulfillment.ShippingSpeedCategory}</td>
-                                                <td>{fulfillment.FulfillmentOrderStatus}</td>
+                                                {
+                                                    fulfillment.FulfillmentOrderStatus === 'COMPLETE' ? (
+                                                        <td style={{ color: 'green' }}>{fulfillment.FulfillmentOrderStatus}</td>
+                                                    ) : <td>{fulfillment.FulfillmentOrderStatus}</td>
+                                                }
                                                 <td>{fulfillment.FulfillmentPolicy}</td>
                                                 <td>
                                                     <Button onClick={() => this.checkDestination(fulfillment.AmazonOrderId)} color="primary">
