@@ -14,8 +14,28 @@ import {
     INVENTORY_LOWEST_PRICES_SUCCESS,
     INVENTORY_LOWEST_PRICES_FAILURE,
     PRODUCT_EVALUATOR_SUCCESS,
-    PRODUCT_EVALUATOR_FAILURE
+    PRODUCT_EVALUATOR_FAILURE,
+    PRODUCT_STOCKS_SUCCESS,
+    PRODUCT_STOCKS_FAILURE
 } from './types';
+
+export const getStocks = () => (dispatch, getState) => {
+
+    axios
+        .get('/sellerProducts/checkStocks', tokenConfig(getState))
+        .then(res => {
+            dispatch({
+                type: PRODUCT_STOCKS_SUCCESS,
+                payload: res.data
+            });
+        }).catch(err => {
+            dispatch({
+                type: PRODUCT_STOCKS_FAILURE,
+                payload: err.response
+            });
+        });
+
+}
 
 export const evaluateProduct = ({ sku, principal, shipping, quantity, referral, fba, buyCost, sample, setup, misc, inspection }) => (dispatch, getState) => {
 

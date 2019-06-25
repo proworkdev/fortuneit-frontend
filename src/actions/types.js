@@ -65,6 +65,8 @@ export const INVENTORY_LOWEST_PRICES_SUCCESS = 'INVENTORY_LOWEST_PRICES_SUCCESS'
 export const INVENTORY_LOWEST_PRICES_FAILURE = 'INVENTORY_LOWEST_PRICES_FAILURE';
 export const PRODUCT_EVALUATOR_SUCCESS = 'PRODUCT_EVALUATOR_SUCCESS';
 export const PRODUCT_EVALUATOR_FAILURE = 'PRODUCT_EVALUATOR_FAILURE';
+export const PRODUCT_STOCKS_SUCCESS = 'PRODUCT_STOCKS_SUCCESS';
+export const PRODUCT_STOCKS_FAILURE = 'PRODUCT_STOCKS_FAILURE';
 //-----------------------------------------------------------------
 
 //---------------------------ORDERS--------------------------------

@@ -10,7 +10,9 @@ import {
     INVENTORY_LOWEST_PRICES_SUCCESS,
     INVENTORY_LOWEST_PRICES_FAILURE,
     PRODUCT_EVALUATOR_SUCCESS,
-    PRODUCT_EVALUATOR_FAILURE
+    PRODUCT_EVALUATOR_FAILURE,
+    PRODUCT_STOCKS_SUCCESS,
+    PRODUCT_STOCKS_FAILURE
 } from '../actions/types';
 
 // Initial state of the profile reducer. By default, all fields are set to null/false.
@@ -21,7 +23,8 @@ const initialState = {
     feesData: {},
     inventoryOffers: {},
     error: {},
-    evaluationData: {}
+    evaluationData: {},
+    stocksData: {}
 }
 
 export default function (state = initialState, action) {
@@ -99,6 +102,20 @@ export default function (state = initialState, action) {
             }
 
         case PRODUCT_EVALUATOR_FAILURE:
+
+            return {
+                ...state,
+                error: action.payload
+            }
+
+        case PRODUCT_STOCKS_SUCCESS:
+
+            return {
+                ...state,
+                stocksData: action.payload
+            }
+
+        case PRODUCT_STOCKS_FAILURE:
 
             return {
                 ...state,

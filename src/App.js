@@ -33,7 +33,8 @@ import {
   productEvaluator,
   evaluationForm,
   fulfillmentOrders,
-  fulfillmentDetails
+  fulfillmentDetails,
+  checkStock
 } from './components';
 import store from './store';
 import { Provider } from 'react-redux';
@@ -79,6 +80,7 @@ class App extends Component {
             <Route path="/evaluate" component={evaluationForm} />
             <Route path="/fulfillmentOrders" component={fulfillmentOrders} />
             <Route path="/fulfillmentDetails" component={fulfillmentDetails} />
+            <Route path="/productStock" component={checkStock}/>
           </Switch>
         </Router>
       </Provider>

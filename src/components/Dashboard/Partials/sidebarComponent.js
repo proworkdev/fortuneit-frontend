@@ -23,15 +23,17 @@ export default class sidebarComponent extends Component {
             <ul className="sidebar-menu">
 
               <li className="nav-item">
-                <a href="/dashboard" className="sidebar-link">
-                  <span className="icon-holder"><i className="fa fa-home" aria-hidden="true"></i> </span><span className="title">Home</span>
-                </a>
+                <Link to='/dashboard' className="sidebar-link">Home</Link>
+
+                {/* <span className="icon-holder"><i className="fa fa-home" aria-hidden="true"></i> </span><span className="title">Home</span> */}
+
               </li>
 
               <li className="nav-item">
                 <a className="sidebar-link " data-toggle="collapse" href="#product">
                   <span className="icon-holder"><i className="fa fa-tachometer" aria-hidden="true"></i> </span><span className="title">Product</span>
                 </a>
+
                 <ul id="product" className="submenu-bar collapse">
 
                   <li>
@@ -50,6 +52,10 @@ export default class sidebarComponent extends Component {
                     <Link to='/productEvaluator' className="menu-btn">Product Evaluator</Link>
                   </li>
 
+                  <li>
+                    <Link to='/productStock' className="menu-btn">Check Stock</Link>
+                  </li>
+
                 </ul>
               </li>
 
@@ -58,15 +64,19 @@ export default class sidebarComponent extends Component {
                   <span className="icon-holder"><i className="fa fa-envelope" aria-hidden="true"></i> </span><span className="title">Order</span>
                 </a>
                 <ul id="order" className="submenu-bar collapse">
+
                   {/* <li>
                     <a href="/addOrder" className="menu-btn">Add Order</a>
                   </li> */}
+
                   <li>
                     <Link to='/manageOrders' className="menu-btn">Manage Orders</Link>
                   </li>
+
                   <li>
                     <Link to='/refundRequests' className="menu-btn">Refunds</Link>
                   </li>
+
                 </ul>
               </li>
 
@@ -83,6 +93,7 @@ export default class sidebarComponent extends Component {
                   <span className="icon-holder"><i className="fa fa-tachometer" aria-hidden="true"></i> </span><span className="title">Fulfillment</span>
                 </a>
                 <ul id="fulfillment" className="submenu-bar collapse">
+
                   <li>
                     <Link to='/fulfillmentOrders' className="menu-btn">Order Fulfillments</Link>
                   </li>
@@ -102,22 +113,28 @@ export default class sidebarComponent extends Component {
               </li> */}
 
               <li className="nav-item">
+
                 <a className="sidebar-link" data-toggle="collapse" href="#account">
                   <span className="icon-holder"><i className="fa fa-compass" aria-hidden="true"></i> </span><span className="title">Account Settings</span>
                 </a>
-                <ul id="account" className="submenu-bar collapse " >
+
+                <ul id="account" className="submenu-bar collapse ">
+
                   <li className="">
                     <Link to='/profileSettings' className="menu-btn">Profile</Link>
                   </li>
+
                   <li>
                     <Link to='/subscriptionTier' className="menu-btn">Subscription Tier</Link>
                   </li>
+
                   {/* <li>
                     <a href="" className="menu-btn">Payment Method</a>
                   </li>
                   <li>
                     <a href="" className="menu-btn">Record History</a>
                   </li> */}
+
                 </ul>
               </li>
 
