@@ -36,8 +36,6 @@ class checkStock extends Component {
 
         const { stocksArray } = this.state;
 
-        console.log('Testing Stocks in Render ==> ', stocksArray);
-
         return (
             <div>
                 <div className="main-panel">
@@ -64,6 +62,7 @@ class checkStock extends Component {
                                 </thead>
 
                                 <tbody>
+
                                     {
                                         stocksArray.map((stock, index) => {
                                             return <tr key={index}>
@@ -78,6 +77,7 @@ class checkStock extends Component {
                                             </tr>
                                         })
                                     }
+
                                 </tbody>
                             </Table>
                         </div>

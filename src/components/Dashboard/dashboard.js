@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import HeaderComponent from './Partials/headerComponent';
 import SidebarComponent from './Partials/sidebarComponent';
-import { syncOrders } from './../../actions/orderActions';
-import { syncProducts } from './../../actions/productActions';
+import { getDashboardMetrics } from './../../actions/dashboardActions';
 
 class showDashboard extends Component {
 
@@ -14,8 +13,7 @@ class showDashboard extends Component {
     }
 
     componentDidMount() {
-        // this.props.syncOrders();
-        // this.props.syncProducts();
+        this.props.getDashboardMetrics();
     }
 
     render() {
@@ -151,4 +149,4 @@ const mapStateToProps = (state) => ({
     loginData: state.auth.loggedInUser
 })
 
-export default connect(mapStateToProps, { syncOrders, syncProducts })(showDashboard);
+export default connect(mapStateToProps, { getDashboardMetrics })(showDashboard);

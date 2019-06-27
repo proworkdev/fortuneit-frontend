@@ -63,7 +63,19 @@ class manageProducts extends Component {
 
         const { productsArray, offersData } = this.state;
 
-        console.log('Testing Offers in Render ==> ', offersData);
+        const renderProducts = productsArray.map((product, index) => {
+
+            let newDate = new Date(product.PostedDate);
+
+            console.log('Testing New Date ==> ', newDate.getUTCDay());
+
+            return <tr key={index}>
+                {
+                    product.Principal ? (<td>$ {product.Principal}</td>) :
+                        <td>N/A</td>
+                }
+            </tr>
+        })
 
         return (
             <div>
@@ -85,7 +97,8 @@ class manageProducts extends Component {
 
                             <br />
 
-                            <Table bordered responsive >
+                            <Table bordered responsive>
+
                                 <thead>
                                     <tr>
                                         <th>Principal</th>
@@ -97,9 +110,12 @@ class manageProducts extends Component {
                                         <th>Description</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
 
-                                    {
+                                    {renderProducts}
+
+                                    {/* {
                                         productsArray.map((product, index) => {
                                             return <tr>
                                                 {
@@ -114,20 +130,25 @@ class manageProducts extends Component {
                                                     product.ReferralFee ? (<td>$ {product.ReferralFee}</td>) :
                                                         <td>N/A</td>
                                                 }
-                                                <td>{product.PostedDate}</td>
+                                                <td>
+                                                    {
+                                                        product.PostedDate
+                                                    }
+                                                </td>
                                                 <td>{product.SellerSKU}</td>
                                                 <td>{product.ASIN}</td>
                                                 <td>{product.ProductDesc}</td>
                                                 <Button onClick={() => this.offersFunction(product.ASIN)} color="primary">Lower Price Offers</Button>
                                             </tr>
-
                                         })
-                                    }
+                                    } */}
 
                                 </tbody>
+
                             </Table>
 
                         </div>
+
                         <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
                             <ModalHeader toggle={this.toggle}>Lowest Price Offers for selected product</ModalHeader>
                             <ModalBody>

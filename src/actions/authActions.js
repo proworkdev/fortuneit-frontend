@@ -58,8 +58,6 @@ export const addBusinessInfo = ({ businessName, productCategory, address, busine
 
     const body = JSON.stringify({ businessName, productCategory, address, businessTagline, userImage, email });
 
-    console.log('Testing Body ==> ', body);
-
     axios
         .post('/business/businessInfo', body, config)
         .then(res =>
