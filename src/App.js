@@ -80,7 +80,7 @@ class App extends Component {
             <Route path="/evaluate" component={evaluationForm} />
             <Route path="/fulfillmentOrders" component={fulfillmentOrders} />
             <Route path="/fulfillmentDetails" component={fulfillmentDetails} />
-            <Route path="/productStock" component={checkStock}/>
+            <Route path="/productStock" component={checkStock} />
           </Switch>
         </Router>
       </Provider>

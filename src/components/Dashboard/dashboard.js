@@ -4,6 +4,7 @@ import HeaderComponent from './Partials/headerComponent';
 import SidebarComponent from './Partials/sidebarComponent';
 import { getDashboardMetrics } from './../../actions/dashboardActions';
 
+
 class showDashboard extends Component {
 
     constructor(props) {
@@ -53,8 +54,8 @@ class showDashboard extends Component {
                                                     <i className="fa fa-user-o" aria-hidden="true"></i>
                                                 </div>
                                                 <div className="title-text">
-                                                    <div className="main-title">10368</div>
-                                                    <div className="memeber-status">members online</div>
+                                                    <div className="main-title">1</div>
+                                                    <div className="memeber-status">member online</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,7 +70,7 @@ class showDashboard extends Component {
                                                     <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                                                 </div>
                                                 <div className="title-text">
-                                                    <div className="main-title">388,688</div>
+                                                    <div className="main-title">40</div>
                                                     <div className="memeber-status">items solid</div>
                                                 </div>
                                             </div>
@@ -85,7 +86,7 @@ class showDashboard extends Component {
                                                     <i className="fa fa-calendar" aria-hidden="true"></i>
                                                 </div>
                                                 <div className="title-text">
-                                                    <div className="main-title">1,086</div>
+                                                    <div className="main-title">7</div>
                                                     <div className="memeber-status">This week</div>
                                                 </div>
                                             </div>
@@ -101,7 +102,7 @@ class showDashboard extends Component {
                                                     <i className="fa fa-usd" aria-hidden="true"></i>
                                                 </div>
                                                 <div className="title-text">
-                                                    <div className="main-title">1,060,386</div>
+                                                    <div className="main-title">40</div>
                                                     <div className="memeber-status">Total earnings</div>
                                                 </div>
                                             </div>

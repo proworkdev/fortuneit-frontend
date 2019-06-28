@@ -4,18 +4,25 @@ import SidebarComponent from './../Partials/sidebarComponent';
 import { connect } from 'react-redux';
 import { fetchProducts, checkLowestOffersForInventoryProducts } from './../../../actions/productActions';
 import { Alert, Table, Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
+// import Pagination from "react-js-pagination";
+// require("bootstrap/css/bootstrap.css");
 
 class manageProducts extends Component {
 
     constructor(props) {
+
         super(props);
 
         this.state = {
             infoMessage: true,
             productsArray: [],
             offersData: [],
-            modal: false
+            modal: false,
+            currentPage: 1,
+            productsPerPage: 10,
+            activePage: 15
         }
+
     }
 
     componentDidUpdate(prevProps) {
@@ -34,6 +41,28 @@ class manageProducts extends Component {
 
     onClickFunction = () => {
         this.setState({ infoMessage: false })
+    }
+
+    handleClick = (event) => {
+
+        this.setState({
+
+            _currentPage: Number(event.target.id),
+
+            get currentPage() {
+                return this._currentPage;
+            },
+            set currentPage(value) {
+                this._currentPage = value;
+            },
+        });
+
+        window.scrollTo(0, 0);
+    }
+
+    handlePageChange(pageNumber) {
+        console.log(`active page is ${pageNumber}`);
+        this.setState({ activePage: pageNumber });
     }
 
     offersFunction = (asin) => {
@@ -61,27 +90,52 @@ class manageProducts extends Component {
 
     render() {
 
-        const { productsArray, offersData } = this.state;
+        const { productsArray, offersData, currentPage, productsPerPage } = this.state;
 
-        const renderProducts = productsArray.map((product, index) => {
+        const indexOfLastProduct = currentPage * productsPerPage;
+        const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+        const currentProducts = productsArray.slice(indexOfFirstProduct, indexOfLastProduct);
 
-            let newDate = new Date(product.PostedDate);
+        const pageNumbers = [];
 
-            console.log('Testing New Date ==> ', newDate.getUTCDay());
+        for (let i = 1; i <= Math.ceil(productsArray.length / productsPerPage); i++) {
+            pageNumbers.push(i);
+        }
 
-            return <tr key={index}>
-                {
-                    product.Principal ? (<td>$ {product.Principal}</td>) :
-                        <td>N/A</td>
-                }
-            </tr>
+        const renderPageNumbers = pageNumbers.map(number => {
+
+            return (
+                <li
+                    key={number}
+                    id={number}
+                    onClick={this.handleClick}
+                >
+                    {number}
+                </li>
+            )
         })
 
+        // const renderProducts = productsArray.map((product, index) => {
+
+        //     let newDate = new Date(product.PostedDate);
+
+        //     console.log('Testing New Date ==> ', newDate.getUTCDay());
+
+        //     return <tr key={index}>
+        //         {
+        //             product.Principal ? (<td>$ {product.Principal}</td>) :
+        //                 <td>N/A</td>
+        //         }
+        //     </tr>
+        // })
+
         return (
+
             <div>
                 <div className="main-panel">
                     <SidebarComponent propData={this.props} />
                     <div className="page-container">
+
                         {
                             this.state.infoMessage ? (
                                 <div onClick={this.onClickFunction}>
@@ -89,6 +143,7 @@ class manageProducts extends Component {
                                 </div>
                             ) : null
                         }
+
                         <HeaderComponent propData={this.props} />
 
                         <div className="inner-panel">
@@ -113,10 +168,10 @@ class manageProducts extends Component {
 
                                 <tbody>
 
-                                    {renderProducts}
+                                    {/* {renderProducts} */}
 
-                                    {/* {
-                                        productsArray.map((product, index) => {
+                                    {
+                                        currentProducts.map((product, index) => {
                                             return <tr>
                                                 {
                                                     product.Principal ? (<td>$ {product.Principal}</td>) :
@@ -141,17 +196,36 @@ class manageProducts extends Component {
                                                 <Button onClick={() => this.offersFunction(product.ASIN)} color="primary">Lower Price Offers</Button>
                                             </tr>
                                         })
-                                    } */}
+                                    }
 
                                 </tbody>
 
                             </Table>
 
+                            <center>
+
+                                {/* <Pagination
+                                    activePage={this.state.activePage}
+                                    itemsCountPerPage={10}
+                                    totalItemsCount={450}
+                                    pageRangeDisplayed={5}
+                                    onChange={this.handlePageChange}
+                                /> */}
+
+                                <ul className="pagination">
+                                    {renderPageNumbers}
+                                </ul>
+
+                            </center>
+
                         </div>
 
                         <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
+
                             <ModalHeader toggle={this.toggle}>Lowest Price Offers for selected product</ModalHeader>
+
                             <ModalBody>
+
                                 <Table size="lg" bordered responsive>
                                     <thead>
                                         <tr>
@@ -183,6 +257,7 @@ class manageProducts extends Component {
                                 <Button color="primary" onClick={this.toggle}>Okay</Button>
                             </ModalFooter>
                         </Modal>
+
                     </div>
                 </div>
             </div>

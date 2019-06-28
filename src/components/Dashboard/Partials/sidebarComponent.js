@@ -22,12 +22,13 @@ export default class sidebarComponent extends Component {
 
             <ul className="sidebar-menu">
 
-              <li className="nav-item">
-                <Link to='/dashboard' className="sidebar-link">Home</Link>
+              {/* <li> */}
 
-                {/* <span className="icon-holder"><i className="fa fa-home" aria-hidden="true"></i> </span><span className="title">Home</span> */}
+              {/* <Link to='/dashboard' className="sidebar-link">Home</Link> */}
 
-              </li>
+              {/* <span className="icon-holder"><i className="fa fa-home" aria-hidden="true"></i> </span><span className="title">Home</span> */}
+
+              {/* </li> */}
 
               <li className="nav-item">
                 <a className="sidebar-link " data-toggle="collapse" href="#product">
@@ -52,9 +53,9 @@ export default class sidebarComponent extends Component {
                     <Link to='/productEvaluator' className="menu-btn">Product Evaluator</Link>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <Link to='/productStock' className="menu-btn">Check Stock</Link>
-                  </li>
+                  </li> */}
 
                 </ul>
               </li>

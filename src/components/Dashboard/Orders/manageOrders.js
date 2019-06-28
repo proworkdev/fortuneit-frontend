@@ -192,11 +192,11 @@ class manageOrders extends Component {
                         }
                         <div className="inner-panel">
 
-                            <h4>Manage Orders</h4>
+                            <h4><u>Manage Orders</u></h4>
 
                             <br />
 
-                            {
+                            {/* {
                                 ordersArray.length !== 0 ? (<div className="input-field">
 
                                     <select onChange={this.onChangeText} name="ordersDate" >
@@ -208,7 +208,7 @@ class manageOrders extends Component {
 
                                     <Button onClick={this.getOrderForDate} size="sm" style={{ marginLeft: 20 }} color="primary"><p style={{ color: '#fff' }}>Find</p></Button>
                                 </div>) : null
-                            }
+                            } */}
 
                             <br />
 

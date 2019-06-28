@@ -2463,6 +2463,7 @@ body::-webkit-scrollbar-track-piece {
 	position: relative;
 	display: inline-block;
 	padding-left: 60px;
+	height: 300px;
 }
 
 .top-graf-box .overview-item .overview-inner .overview-box .icon {
@@ -2746,10 +2747,11 @@ button.social-testclass span {
 .pagination li {
     color: #fff;
     float: left;
-    padding: 0px 0px;
+    padding: 3px 12px;
     text-decoration: none;
     background-color: #8a8883;
-    margin: 0px 0 0 0px;
+    margin: 0px 0 0 10px;
+	cursor: pointer;
 }
 
 .pagination li.active {
@@ -2757,4 +2759,8 @@ button.social-testclass span {
   color: white;
 }
 
-.pagination li:hover:not(.active) {background-color: #e0a800;}
+.pagination li:hover:not(.active) {background-color: #e0a800!important;}
+
+
+
+

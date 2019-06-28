@@ -23,6 +23,7 @@
     "react-facebook-login": "^4.1.1",
     "react-fusioncharts": "^3.0.0",
     "react-google-login": "^5.0.3",
+    "react-js-pagination": "^3.0.2",
     "react-paypal-express-checkout": "^1.0.5",
     "react-pose": "^4.0.8",
     "react-pose-text": "^3.1.0",
@@ -52,5 +53,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://localhost:4000"
+  "proxy": "http://ec2-54-183-146-39.us-west-1.compute.amazonaws.com:4000"
 }

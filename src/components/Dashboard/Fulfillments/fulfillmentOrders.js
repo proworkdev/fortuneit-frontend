@@ -8,6 +8,7 @@ import { Alert, Button, Modal, ModalHeader, ModalBody, ModalFooter, Table } from
 class fulfillmentOrders extends Component {
 
     constructor(props) {
+
         super(props);
 
         this.state = {
@@ -18,10 +19,13 @@ class fulfillmentOrders extends Component {
             detailsModal: false,
             addressDetails: {}
         }
+
     }
 
     componentDidMount() {
+
         this.props.getFulfillmentOrders();
+
     }
 
     componentDidUpdate(prevProps) {
@@ -132,7 +136,8 @@ class fulfillmentOrders extends Component {
                                         <th>Shipping Speed</th>
                                         <th>Fulfillment Order Status</th>
                                         <th>Fulfillment Policy</th>
-                                        <th>Actions</th>
+                                        <th>Action 1</th>
+                                        <th>Action 2</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -149,11 +154,18 @@ class fulfillmentOrders extends Component {
                                                 }
                                                 <td>{fulfillment.FulfillmentPolicy}</td>
                                                 <td>
+
                                                     <Button onClick={() => this.checkDestination(fulfillment.AmazonOrderId)} color="primary">
                                                         <p style={{ color: '#fff' }}>Destination Address</p>
                                                     </Button>
-                                                    <Button onClick={() => this.getFulfillmentDetails(fulfillment.SellerFulfillmentOrderId)} style={{ marginLeft: 20 }} color="danger">Fulfillment Details</Button>
+
                                                 </td>
+                                                <td>
+                                                    <Button onClick={() => this.getFulfillmentDetails(fulfillment.SellerFulfillmentOrderId)}
+                                                        style={{ marginLeft: 20 }} color="danger">Fulfillment Details
+                                                    </Button>
+                                                </td>
+
                                             </tr>
                                         })
                                     }
