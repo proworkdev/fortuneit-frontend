@@ -31,7 +31,10 @@ import evaluationForm from './Dashboard/Products/evaluationForm';
 import fulfillmentOrders from './Dashboard/Fulfillments/fulfillmentOrders';
 import fulfillmentDetails from './Dashboard/Fulfillments/fulfillmentDetails';
 import checkStock from './Dashboard/Products/checkStock';
+<<<<<<< HEAD
 import addNewProduct from './Dashboard/Products/addNewProduct';
+=======
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 
 export {
     LandingPage,
@@ -66,6 +69,10 @@ export {
     evaluationForm,
     fulfillmentOrders,
     fulfillmentDetails,
+<<<<<<< HEAD
     checkStock,
     addNewProduct
+=======
+    checkStock
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 }

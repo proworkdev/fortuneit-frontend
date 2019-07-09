@@ -1036,7 +1036,10 @@ body::-webkit-scrollbar-track-piece {
 	padding:0px 15px;
 	min-width: 95px;
 	font-size: 14px;
+<<<<<<< HEAD
 	cursor: pointer;
+=======
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 }
 .form-group .form .input-form .prev-btn {
     float: left;

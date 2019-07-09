@@ -13,7 +13,11 @@ export default function (state = initialState, action) {
     switch (action.type) {
         // If an error occurs
         case GET_ERRORS:
+<<<<<<< HEAD
             
+=======
+            console.log('GET ERRORS REDUCER HIT! ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 // These fields are coming from errorActions
                 message: action.payload.message,

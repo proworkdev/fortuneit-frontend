@@ -59,7 +59,6 @@ class addProduct extends Component {
                         <HeaderComponent propData={this.props} />
 
                         <div className="inner-panel">
-
                             <div className="page-top-action">
                                 <div className="left-action">
                                     <div className="title">Add Product</div>
@@ -80,42 +79,36 @@ class addProduct extends Component {
                                             <input name="sku" onChange={this.onChangeFunction} className="form-control" type="text" />
                                         </div>
                                     </div>
-
                                     <div className="input-form">
                                         <div className="label">ASIN</div>
                                         <div className="input-field">
                                             <input name="asin" onChange={this.onChangeFunction} className="form-control" type="text" />
                                         </div>
                                     </div>
-
                                     <div className="input-form">
                                         <div className="label">Product Title</div>
                                         <div className="input-field">
                                             <input name="productTitle" onChange={this.onChangeFunction} className="form-control" type="text" />
                                         </div>
                                     </div>
-
                                     <div className="input-form">
                                         <div className="label">Product Brand</div>
                                         <div className="input-field">
                                             <input name="productBrand" onChange={this.onChangeFunction} className="form-control" type="text" />
                                         </div>
                                     </div>
-
                                     <div className="input-form">
                                         <div className="label">Product Description</div>
                                         <div className="input-field">
                                             <input name="productDescription" onChange={this.onChangeFunction} className="form-control" type="text" />
                                         </div>
                                     </div>
-
                                     <div className="input-form">
                                         <div className="label">Price</div>
                                         <div className="input-field">
                                             <input name="productPrice" onChange={this.onChangeFunction} className="form-control" type="text" />
                                         </div>
                                     </div>
-
                                     <div className="input-form">
                                         <div className="label">Manufacturer</div>
                                         <div className="input-field">
@@ -130,7 +123,6 @@ class addProduct extends Component {
                                     </Button>
 
                                 </form>
-
                             </div>
                         </div>
                     </div>

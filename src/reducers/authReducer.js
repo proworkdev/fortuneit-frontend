@@ -43,7 +43,11 @@ export default function (state = initialState, action) {
 
         // User is still in loading state
         case USER_LOADING:
+<<<<<<< HEAD
 
+=======
+            console.log('USER LOADING REDUCER HAS BEEN HIT!');
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 // Returns original state
                 ...state,
@@ -52,7 +56,11 @@ export default function (state = initialState, action) {
 
         // User has been loaded
         case USER_LOADED:
+<<<<<<< HEAD
 
+=======
+            console.log('Load User Reducer Hit!! ==> ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 // The user's authentication has been set to true
@@ -66,6 +74,11 @@ export default function (state = initialState, action) {
         case LOGIN_SUCCESS:
         case REGISTER_SUCCESS:
 
+<<<<<<< HEAD
+=======
+            console.log('Testing Register Reducer Payload --> ', action.payload);
+
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             const { token, user } = action.payload;
 
             // Fetching & setting the token from server to localstorage for future requests!
@@ -94,6 +107,11 @@ export default function (state = initialState, action) {
         case REGISTER_FAIL:
         case LOGOUT_SUCCESS:
 
+<<<<<<< HEAD
+=======
+            console.log('Logout Reducer Has been Hit!', action.payload);
+
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             // Removing/destroying the token in localstorage so that it couldn't be used further!
             localStorage.removeItem('token');
 
@@ -108,7 +126,11 @@ export default function (state = initialState, action) {
 
         // If the email(OTP) has been verified.
         case OTP_CONFIRMATION_SUCCESS:
+<<<<<<< HEAD
 
+=======
+            console.log('Otp conf reducer hit ==> ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 data: action.payload,
@@ -119,7 +141,11 @@ export default function (state = initialState, action) {
         case OTP_RESENT_SUCCESS:
         case OTP_SENT_SUCCESS:
         case PASSWORD_RESET_SUCCESS:
+<<<<<<< HEAD
 
+=======
+            console.log('Password reset success Reducer --> ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 data: action.payload,
@@ -127,27 +153,43 @@ export default function (state = initialState, action) {
             }
 
         case OTP_CONFIRMATION_FAILED:
+<<<<<<< HEAD
 
+=======
+            console.log('Inside OTP conf failed reducer ==> ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 err: action.payload
             }
 
         case BUSINESS_SUCCESS:
+<<<<<<< HEAD
 
+=======
+            console.log('Business Success Reducer Hit! ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 businessData: action.payload
             }
 
         case BUSINESS_FAILURE:
+<<<<<<< HEAD
 
+=======
+            console.log('Business Failure Reducer Hit! ==> ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state
             }
 
         case PLAN_CHOSEN:
+<<<<<<< HEAD
 
+=======
+            console.log('Testing Plan Chosen In Auth Reducer ==> ', action.payload);
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 isPlanSelected: true,

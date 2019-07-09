@@ -67,8 +67,11 @@ export const PRODUCT_EVALUATOR_SUCCESS = 'PRODUCT_EVALUATOR_SUCCESS';
 export const PRODUCT_EVALUATOR_FAILURE = 'PRODUCT_EVALUATOR_FAILURE';
 export const PRODUCT_STOCKS_SUCCESS = 'PRODUCT_STOCKS_SUCCESS';
 export const PRODUCT_STOCKS_FAILURE = 'PRODUCT_STOCKS_FAILURE';
+<<<<<<< HEAD
 export const WIZARD_DATA_SUCCESS = 'WIZARD_DATA_SUCCESS';
 export const WIZARD_DATA_FAILURE = 'WIZARD_DATA_FAILURE';
+=======
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 //-----------------------------------------------------------------
 
 //---------------------------ORDERS--------------------------------

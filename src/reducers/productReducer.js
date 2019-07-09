@@ -12,9 +12,13 @@ import {
     PRODUCT_EVALUATOR_SUCCESS,
     PRODUCT_EVALUATOR_FAILURE,
     PRODUCT_STOCKS_SUCCESS,
+<<<<<<< HEAD
     PRODUCT_STOCKS_FAILURE,
     WIZARD_DATA_SUCCESS,
     WIZARD_DATA_FAILURE
+=======
+    PRODUCT_STOCKS_FAILURE
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 } from '../actions/types';
 
 // Initial state of the profile reducer. By default, all fields are set to null/false.
@@ -26,8 +30,12 @@ const initialState = {
     inventoryOffers: {},
     error: {},
     evaluationData: {},
+<<<<<<< HEAD
     stocksData: {},
     wizardData: {}
+=======
+    stocksData: {}
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 }
 
 export default function (state = initialState, action) {
@@ -125,6 +133,7 @@ export default function (state = initialState, action) {
                 error: action.payload
             }
 
+<<<<<<< HEAD
         case WIZARD_DATA_SUCCESS:
 
             return {
@@ -139,6 +148,8 @@ export default function (state = initialState, action) {
                 error: action.payload
             }
 
+=======
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
         default:
             return state;
     }

@@ -1,6 +1,10 @@
 module.exports = {
   "extends": ["airbnb", "prettier", "prettier/react"],
+<<<<<<< HEAD
   "env": {
+=======
+  "env":{
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     "jquery": true
   },
   "plugins": ["prettier"],

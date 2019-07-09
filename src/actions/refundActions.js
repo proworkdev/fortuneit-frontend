@@ -4,6 +4,11 @@ import { tokenConfig } from './authActions';
 
 export const getRefundDetails = ({ amazonOrderId }) => (dispatch, getState) => {
 
+<<<<<<< HEAD
+=======
+    console.log('Refund Details Action Hit!');
+
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     const body = JSON.stringify({ amazonOrderId });
 
     axios
@@ -18,6 +23,11 @@ export const getRefundDetails = ({ amazonOrderId }) => (dispatch, getState) => {
 
 export const fetchRefundsData = () => (dispatch, getState) => {
 
+<<<<<<< HEAD
+=======
+    console.log('Fetch Refunds Action Hit!');
+
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     axios
         .get('/sellerRefunds/fetchRefunds', tokenConfig(getState))
         .then(res => {

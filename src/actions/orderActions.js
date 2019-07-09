@@ -9,6 +9,11 @@ import { tokenConfig } from './authActions';
 
 export const getOrdersForDuration = ({ ordersDate }) => (dispatch, getState) => {
 
+<<<<<<< HEAD
+=======
+    console.log('Fetch Orders by date Action hit!');
+
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     const body = JSON.stringify({ ordersDate });
 
     axios
@@ -43,6 +48,11 @@ export const addNewOrder = ({ productSelected, orderQuantity, customerName, cust
 
 export const fetchOrders = () => (dispatch, getState) => {
 
+<<<<<<< HEAD
+=======
+    console.log('Fetch Orders Action Hit!');
+
+>>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     axios
         .get('/sellerOrders/getOrders', tokenConfig(getState))
         .then(res => {
