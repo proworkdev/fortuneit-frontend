@@ -9,11 +9,6 @@ import {
 
 export const fetchAllPlans = () => (dispatch, getState) => {
 
-<<<<<<< HEAD
-=======
-    console.log('Fetch Plans Acxtion Hit!');
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     axios
         // Sending token along with request
         .get('/seller/plans/viewPlans')

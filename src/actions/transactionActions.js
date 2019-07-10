@@ -4,11 +4,6 @@ import { tokenConfig } from './authActions';
 
 export const fetchTransactions = () => (dispatch, getState) => {
 
-<<<<<<< HEAD
-=======
-    console.log('Fetch Transactions Action Hit!');
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     axios
         .get('/sellerTransactions/getAllTransactions', tokenConfig(getState))
         .then(res => {

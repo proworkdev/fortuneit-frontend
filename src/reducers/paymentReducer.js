@@ -16,11 +16,6 @@ export default function (state = initialState, action) {
 
         case PAYMENT_SUCCESS_DONE:
         case PAYMENT_FAILED_DONE:
-<<<<<<< HEAD
-
-=======
-            console.log('Payment Success/Cancelled Reducer Hit ==> ', action.payload);
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 ...action.payload,
@@ -29,11 +24,7 @@ export default function (state = initialState, action) {
 
         case PAYMENT_SUCCESS_ERROR:
         case PAYMENT_FAILED_ERROR:
-<<<<<<< HEAD
             
-=======
-            console.log('Payment success/cancellation error Reducer hit! ==> ', action.payload);
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 ...action.payload

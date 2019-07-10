@@ -15,11 +15,6 @@ export default function (state = initialState, action) {
 
         case MWS_VERIFICATION_SUCCESS:
 
-<<<<<<< HEAD
-=======
-            console.log('MWS Success Reducer Hit! ==> ', action.payload);
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             // Setting session storage for persisting the login state.
             localStorage.setItem('loginState', JSON.stringify(action.payload));
 
@@ -31,11 +26,6 @@ export default function (state = initialState, action) {
 
         case MWS_VERIFICATION_FAILED:
 
-<<<<<<< HEAD
-=======
-            console.log('MWS Failed Reducer Hit! ==> ', action.payload);
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 mwsVerified: action.payload.mwsVerified,

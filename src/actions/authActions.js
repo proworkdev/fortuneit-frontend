@@ -48,11 +48,6 @@ export const loadUser = () => (dispatch, getState) => {
 // Action for adding Business Info.
 export const addBusinessInfo = ({ businessName, productCategory, address, businessTagline, userImage, email }) => dispatch => {
 
-<<<<<<< HEAD
-=======
-    console.log('Add Business Info Action Hit!');
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     const config = {
         headers: {
             'Content-Type': 'application/json'
@@ -128,10 +123,6 @@ export const verifyOtp = ({ otp }) => dispatch => {
                 payload: res.data
             })
         ).catch(err => {
-<<<<<<< HEAD
-=======
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             dispatch(
                 returnErrors(err.response.data, err.response.status, 'OTP_CONFIRMATION_FAILED')
             )
@@ -195,14 +186,8 @@ export const resendOTP = ({ email }) => dispatch => {
             })
             // If an error has occured while resending the OTP to the server.
         ).catch(err => {
-<<<<<<< HEAD
             // Dispatches error data from server to the returnErrors function.
             dispatch(
-=======
-
-            dispatch(
-                // Dispatches error data from server to the returnErrors function.
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
                 returnErrors(err.response.data, err.response.status, 'OTP_RESENT_FAILURE')
             )
             dispatch({
@@ -314,11 +299,6 @@ export const googleSignin = ({ googleToken, plan }) => dispatch => {
 // Action for USER REGISTERATION
 export const register = ({ username, email, password, role, status, origin, plan }) => dispatch => {
 
-<<<<<<< HEAD
-=======
-    console.log('Register Action Hit! ==> ', username, email, password, role, status, origin, plan);
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     // Headers
     const config = {
         headers: {
@@ -363,23 +343,13 @@ export const login = ({ email, password, origin }) => dispatch => {
     axios
         .post('/auth/authenticate', body, config)
         .then(res =>
-<<<<<<< HEAD
-=======
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             dispatch(
                 {
                     // If authentication succeedes!
                     type: LOGIN_SUCCESS,
                     // Payload contains logged in user details
                     payload: res.data,
-<<<<<<< HEAD
                 }))
-=======
-
-                }))
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
         .catch(err => {
             dispatch({
                 // If authentication fails!
@@ -392,18 +362,10 @@ export const login = ({ email, password, origin }) => dispatch => {
 // Action for USER LOGOUT
 export const logout = () => {
 
-<<<<<<< HEAD
     return {
         type: LOGOUT_SUCCESS
     }
 
-=======
-    console.log('Logout Action has been hit!');
-
-    return {
-        type: LOGOUT_SUCCESS
-    }
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 }
 
 // Setup config/header & token

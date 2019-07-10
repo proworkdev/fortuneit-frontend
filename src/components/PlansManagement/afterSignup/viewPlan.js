@@ -40,45 +40,28 @@ class viewPlan extends Component {
 		const { planData } = this.state;
 
 		return (
-<<<<<<< HEAD
 
 			<div>
 
 				<div className="banner-section inner-pages" style={{ backgroundImage: 'url(' + 'images/plan-pack.jpg' + ')' }}>
 
-=======
-			<div>
-				<div className="banner-section inner-pages" style={{ backgroundImage: 'url(' + 'images/plan-pack.jpg' + ')' }}>
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 					<div className="container">
 
 						<div className="banner-content">
 							<div className="banner-title">
 								Start Your {planData.planCurrency} {planData.planPrice} {planData.planDuration} Trial
-<<<<<<< HEAD
 							</div>
 							<div className="banner-subtitle">
 								Credit card payments are processed by Stripe.com and are completely secure. Also, you can cancel your plan at any time
 								with just one click. After your $1 USD trial has finished you will be billed the regular price of $19.95 USD per month until canceled.
 							</div>
-=======
-					</div>
-							<div className="banner-subtitle">
-								Credit card payments are processed by Stripe.com and are completely secure. Also, you can cancel your plan at any time
-								with just one click. After your $1 USD trial has finished you will be billed the regular price of $19.95 USD per month until canceled.
-					</div>
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 							<div className="get-start-btn">
 								<a href="#">Start Trial For $0 USD</a>
 							</div>
 						</div>
-<<<<<<< HEAD
 
 					</div>
 
-=======
-					</div>
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 				</div>
 
 				<div className="plan-details">
@@ -87,7 +70,6 @@ class viewPlan extends Component {
 							<div className="left-side">
 								<div className="plan-title">
 									Each Plan Including
-<<<<<<< HEAD
 								</div>
 								<div className="plan-subtitle">
 									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classNameical Latin literature from 45 BC, making it over 2000 years old.
@@ -99,19 +81,6 @@ class viewPlan extends Component {
 										<li>including versions of Lorem Ipsum.</li>
 										<li>including versions of Lorem Ipsum.</li>
 										<li>including versions of Lorem Ipsum.</li>
-=======
-						</div>
-								<div className="plan-subtitle">
-									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classNameical Latin literature from 45 BC, making it over 2000 years old.
-						</div>
-								<div className="offer-list">
-									<ul>
-										<li> including versions of Lorem Ipsum.</li>
-										<li> including versions of Lorem Ipsum.</li>
-										<li> including versions of Lorem Ipsum.</li>
-										<li> including versions of Lorem Ipsum.</li>
-										<li> including versions of Lorem Ipsum.</li>
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 									</ul>
 								</div>
 								<div className="payment-method">
@@ -147,11 +116,6 @@ class viewPlan extends Component {
 					</div>
 				</div>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 				<div className="footer">
 					<div className="container">
 						<div className="footer-content">
@@ -233,17 +197,11 @@ class viewPlan extends Component {
 								</div>
 							</div>
 						</div>
-<<<<<<< HEAD
 
 						<div className="copyright">
 							<span>Privacy Policy</span>    <span>Terms & Conditions </span><span>Copyright © 2019 FORTUNEIT LLC. All rights reserved.</span>
 						</div>
 
-=======
-						<div className="copyright">
-							<span>Privacy Policy</span>    <span>Terms & Conditions </span><span>Copyright © 2019 FORTUNEIT LLC. All rights reserved.</span>
-						</div>
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 					</div>
 				</div>
 

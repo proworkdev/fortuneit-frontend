@@ -6,10 +6,7 @@
     "@babel/core": "^7.4.0",
     "axios": "^0.18.0",
     "d3": "^5.9.2",
-<<<<<<< HEAD
     "final-form": "^4.16.1",
-=======
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     "flubber": "^0.4.2",
     "fusioncharts": "^3.13.4",
     "google-maps-react": "^2.0.2",
@@ -25,10 +22,7 @@
     "react-datepicker": "^2.7.0",
     "react-dom": "^16.8.5",
     "react-facebook-login": "^4.1.1",
-<<<<<<< HEAD
     "react-final-form": "^6.3.0",
-=======
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     "react-fusioncharts": "^3.0.0",
     "react-google-login": "^5.0.3",
     "react-js-pagination": "^3.0.2",
@@ -40,20 +34,13 @@
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "react-scripts": "2.1.8",
-<<<<<<< HEAD
     "react-stepzilla": "^6.0.0",
-=======
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     "react-table": "^6.10.0",
     "reactstrap": "^7.1.0",
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
-<<<<<<< HEAD
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2"
-=======
-    "redux-thunk": "^2.3.0"
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
   },
   "scripts": {
     "start": "react-scripts start",
@@ -70,10 +57,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-<<<<<<< HEAD
   "proxy": "http://localhost:4000"
 }
-=======
-  "proxy": "http://ec2-54-183-146-39.us-west-1.compute.amazonaws.com:4000"
-}
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3

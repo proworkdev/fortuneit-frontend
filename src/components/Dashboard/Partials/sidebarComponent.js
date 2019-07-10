@@ -38,13 +38,10 @@ export default class sidebarComponent extends Component {
                 <ul id="product" className="submenu-bar collapse">
 
                   <li>
-<<<<<<< HEAD
                     <Link to='/addNewProduct' className="menu-btn">Add new Product</Link>
                   </li>
 
                   {/* <li>
-=======
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
                     <Link to='/manageProducts' className="menu-btn">Manage Products</Link>
                   </li>
 
@@ -58,11 +55,7 @@ export default class sidebarComponent extends Component {
 
                   <li>
                     <Link to='/productEvaluator' className="menu-btn">Product Evaluator</Link>
-<<<<<<< HEAD
                   </li> */}
-=======
-                  </li>
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 
                   {/* <li>
                     <Link to='/productStock' className="menu-btn">Check Stock</Link>
