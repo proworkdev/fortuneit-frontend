@@ -14,11 +14,6 @@ export default function (state = initialState, action) {
 
         case REFUNDS_FETCH_SUCCESS:
 
-<<<<<<< HEAD
-=======
-            console.log('Refunds Success Reducer ==> ', action.payload);
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 data: action.payload
@@ -26,11 +21,6 @@ export default function (state = initialState, action) {
 
         case REFUNDS_FETCH_FAILURE:
 
-<<<<<<< HEAD
-=======
-            console.log('Refunds Failure Reducer ==> ', action.payload);
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
             return {
                 ...state,
                 data: action.payload

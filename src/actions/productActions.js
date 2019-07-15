@@ -16,11 +16,30 @@ import {
     PRODUCT_EVALUATOR_SUCCESS,
     PRODUCT_EVALUATOR_FAILURE,
     PRODUCT_STOCKS_SUCCESS,
-<<<<<<< HEAD
     PRODUCT_STOCKS_FAILURE,
     WIZARD_DATA_SUCCESS,
-    WIZARD_DATA_FAILURE
+    WIZARD_DATA_FAILURE,
+    PRODUCT_ENTRIES_SUCCESS,
+    PRODUCT_ENTRIES_FAILURE
 } from './types';
+
+export const getAllEntries = () => (dispatch, getState) => {
+
+    axios
+        .get('/sellerProducts/fetchAllEntries', tokenConfig(getState))
+        .then((res) => {
+            dispatch({
+                type: PRODUCT_ENTRIES_SUCCESS,
+                payload: res.data
+            })
+        }).catch((err) => {
+            dispatch({
+                type: PRODUCT_ENTRIES_FAILURE,
+                payload: err.response.data
+            })
+        })
+
+}
 
 export const productWizard = ({
     asin,
@@ -86,11 +105,6 @@ export const productWizard = ({
 
 }
 
-=======
-    PRODUCT_STOCKS_FAILURE
-} from './types';
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
 export const getStocks = () => (dispatch, getState) => {
 
     axios
@@ -150,11 +164,6 @@ export const checkLowestOffersForInventoryProducts = ({ asin }) => (dispatch, ge
 
 export const checkProductFees = ({ sellerSku, principal, shipping }) => (dispatch, getState) => {
 
-<<<<<<< HEAD
-=======
-    console.log('Product Fees Action Hit!');
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     const body = JSON.stringify({ sellerSku, principal, shipping });
 
     axios.post('/sellerProducts/productFee', body, tokenConfig(getState))
@@ -173,11 +182,6 @@ export const checkProductFees = ({ sellerSku, principal, shipping }) => (dispatc
 
 export const addNewProduct = ({ sku, asin, productTitle, productBrand, productDescription, productPrice, productManufacturer }) => (dispatch, getState) => {
 
-<<<<<<< HEAD
-=======
-    console.log('Add new product action hit!', tokenConfig(getState))
-
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
     const body = JSON.stringify({ sku, asin, productTitle, productBrand, productDescription, productPrice, productManufacturer });
 
     axios

@@ -34,12 +34,9 @@ import {
   evaluationForm,
   fulfillmentOrders,
   fulfillmentDetails,
-<<<<<<< HEAD
   checkStock,
-  addNewProduct
-=======
-  checkStock
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
+  addNewProduct,
+  productEntries
 } from './components';
 import store from './store';
 import { Provider } from 'react-redux';
@@ -86,10 +83,8 @@ class App extends Component {
             <Route path="/fulfillmentOrders" component={fulfillmentOrders} />
             <Route path="/fulfillmentDetails" component={fulfillmentDetails} />
             <Route path="/productStock" component={checkStock} />
-<<<<<<< HEAD
             <Route path="/addNewProduct" component={addNewProduct} />
-=======
->>>>>>> 33bcd08f3533ce553fb47b0c977ae790daffe2e3
+            <Route path="/allProductEntries" component={productEntries} />
           </Switch>
         </Router>
       </Provider>

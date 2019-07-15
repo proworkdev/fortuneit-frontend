@@ -17,7 +17,8 @@ class Login extends Component {
 		super(props);
 
 		this.state = {
-			email: props.location && props.location.state ? props.location.state.email : '',
+			// email: props.location && props.location.state ? props.location.state.email : '',
+			email:"seller@gmail.com",
 			password: '',
 			fieldsValidation: null,
 			userExists: null,

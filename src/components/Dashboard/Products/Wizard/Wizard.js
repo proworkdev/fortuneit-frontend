@@ -39,6 +39,8 @@ export default class Wizard extends React.Component {
   }
 
   handleSubmit = values => {
+    console.log('this.props ', this.props);
+    console.log('this.state ', this.state);
 
     const { children, onSubmit } = this.props
     const { page } = this.state
@@ -72,10 +74,10 @@ export default class Wizard extends React.Component {
               <Button style={{ marginTop: 20 }} onClick={this.previous} color="gray">Previous</Button>
             )}
             {!isLastPage &&
-              <Button style={{ marginTop: 20 }} color="danger">Next</Button>
+              <Button style={{ marginTop: 20 }} color="danger" padding-left="25px" padding-right="20px"> Next</Button>
             }
             {isLastPage && (
-              <Button disabled={submitting} color="warning"><p style={{ color: '#fff' }}>Submit</p></Button>
+              <Button style={{ marginTop: 20 }} disabled={submitting} color="warning"><p style={{ color: '#fff' }}>Submit</p></Button>
             )}
           </form>
         )}

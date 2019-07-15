@@ -12,7 +12,7 @@ class showDashboard extends Component {
         super(props);
 
     }
-
+   
     componentDidMount() {
         this.props.getDashboardMetrics();
     }
