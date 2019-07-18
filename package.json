@@ -58,5 +58,10 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+<<<<<<< HEAD
   "proxy": "http://ec2-54-183-146-39.us-west-1.compute.amazonaws.com:4000"
 }
+=======
+  "proxy": "http://localhost:4000"
+}
+>>>>>>> 4b56b9487c43b587680483b111a4aa7753423c70
