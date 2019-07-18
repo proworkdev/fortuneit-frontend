@@ -39,8 +39,6 @@ export default class Wizard extends React.Component {
   }
 
   handleSubmit = values => {
-    console.log('this.props ', this.props);
-    console.log('this.state ', this.state);
 
     const { children, onSubmit } = this.props
     const { page } = this.state

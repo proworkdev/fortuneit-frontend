@@ -40,7 +40,7 @@ class allProductEntries extends Component {
 
         const renderEntriesData = entryData.map((entry, index) => {
             return <tr key={index}>
-                <td>a</td>
+                <td>1.</td>
                 <td>{entry.created}</td>
                 <td>{entry.productName}</td>
                 <td>{entry.productDesc}</td>
@@ -66,6 +66,7 @@ class allProductEntries extends Component {
                 <td>{entry.fbaFee}</td>
                 <td>{entry.fulfillmentChargesPerUnit}</td>
                 <td>{entry.fulfillmentChargesPerOrder}</td>
+                <td>{entry.landedCostPerOrder}</td>
                 <td>{entry.landedCostPerUnit}</td>
                 <td>{entry.salesPrice}</td>
                 <td>{entry.estimatedPreAdProfitPerSale}</td>
@@ -93,11 +94,10 @@ class allProductEntries extends Component {
                             <h4><u>All Product Entries</u></h4>
                             <br />
 
-                            <Table>
+                            <Table className="table-responsive">
                                 <thead>
 
                                     <tr>
-
                                         <th>Serial</th>
                                         <th>Entry Date</th>
                                         <th>Product Name</th>
@@ -114,8 +114,8 @@ class allProductEntries extends Component {
                                         <th>Manufacturing Fee</th>
                                         <th>Manufacturing Total</th>
                                         <th>Shipping Method</th>
-                                        <th>Estimated Shipping Cost Per Unit</th>
-                                        <th>Estimated Shipping Cost Per Order</th>
+                                        <th>Est. Shipping Cost Per Unit</th>
+                                        <th>Est. Shipping Cost Per Order</th>
                                         <th>Misc Shipping Fee</th>
                                         <th>Shipping Total</th>
                                         <th>Shipping Total Per Unit</th>
@@ -127,14 +127,14 @@ class allProductEntries extends Component {
                                         <th>Landed Cost Per Order</th>
                                         <th>Landed Cost Per Unit</th>
                                         <th>Sale Price</th>
-                                        <th>Estimated Pre-Ad Profit Per Sale</th>
+                                        <th>Est. Pre-Ad Profit Per Sale</th>
                                         <th>Net Profit Margin</th>
                                         <th>Target Net Profit Margin</th>
                                         <th>Suggested Sales Price</th>
                                         <th>COGS Per Order</th>
                                         <th>Estimated Pre-Ad Profit Per Order</th>
-                                        <th>Breakeven ACoS based on Estimated Pre-APPS</th>
-                                        <th>Estimated Revenue Per Order</th>
+                                        <th>Breakeven ACoS based on Est. Pre-APPS</th>
+                                        <th>Est. Revenue Per Order</th>
                                         <th>Sales to Breakeven</th>
                                         <th>Monthly Sales Target</th>
                                         <th>Estimated Net Profit Monthly</th>

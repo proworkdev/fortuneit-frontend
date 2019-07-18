@@ -2764,8 +2764,8 @@ button.social-testclass span {
 
 
 .info-names{
-	width: 20px;
-    height: 22px;
+	width: 19px;
+    height: 19px;
     margin-left: 5px;
 	cursor: pointer;
 
@@ -2827,8 +2827,18 @@ button.social-testclass span {
 	
 	text-decoration: underline;
 	 text-decoration-style:double;
+	 
 }
 .left-part{
   width: 50%;
   float: left;
+}
+.left-part span{
+	margin-left: 10px;
+}
+.ryt-part span{
+	margin-left: 10px;
+}
+.table thead th {
+    vertical-align: top!important;
 }
